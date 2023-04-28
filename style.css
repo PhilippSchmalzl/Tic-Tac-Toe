@@ -1,3 +1,85 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(img/background.jpg);
+}
+
+.player-panel {
+    display: flex;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.player-panel img {
+    width: 60px;
+    height: 60px;
+    margin-right: 16px;
+}
+
+.player-panel div {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+.player-inactive {
+    opacity: 0.5;
+}
+
+.horizontal-line {
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 400px;
+    position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 225 ease-in-out;
+    z-index: 1;
+}
+
+.make-vertical {
+    transform: rotate(90deg) scaleX(0.0);
+}
+
+.game-over {
+    z-index: 2;
+    animation: zoomIn 225ms ease-in-out;
+    max-width: 80%;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.restart-btn {
+    border: none;
+    background-color: #1C0B7F;
+    z-index: 2;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    animation: zoomIn 225ms ease-in-out;
+    padding: 40px 100px;
+}
+
+.restart-btn:hover {
+    background-color: #383186;
+}
+
+.table-container {
+    position: relative;
+}
+
 table {
     border-collapse: collapse;
 }
@@ -15,7 +97,7 @@ table td {
 }
 
 td:hover {
-    background-color: rgba(137, 196, 244, 0.3);
+    background-color: rgba(28,11,127,0.5)
 }
 
 table tr:first-child td {
@@ -44,4 +126,31 @@ table tr td:last-child {
 
 .d-none {
     display: none;
+}
+
+
+@media (max-width: 500px) {
+
+    body {
+        justify-content: flex-start;
+        margin-top: 40px;
+    }
+
+    .player-panel {
+        flex-direction: column;
+    }
+
+    .player-panel div {
+        padding: 8px;
+    }
+
+    table td {
+        height: 100px;
+        width: 100px;
+    }
+
+    .restart-btn {
+        padding: 20px 50px;
+        font-size: 20px;
+    }
 }
