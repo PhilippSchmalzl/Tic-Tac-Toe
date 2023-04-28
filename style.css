@@ -132,8 +132,8 @@ table tr td:last-child {
 @media (max-width: 500px) {
 
     body {
-        justify-content: flex-start;
-        margin-top: 40px;
+        height: 50vh;
+        justify-content: space-evenly;
     }
 
     .player-panel {
@@ -152,5 +152,55 @@ table tr td:last-child {
     .restart-btn {
         padding: 20px 50px;
         font-size: 20px;
+    }
+
+    .shape {
+        height: 60px;
+        width: 60px;
+        top: 20px;
+        left: 20px;
+    }
+
+    .horizontal-line {
+        width: 316px;
+    }
+
+    #line-0 {
+        top: 45px !important;
+    }
+
+    #line-1 {
+        top: 152px !important;
+    }
+
+    #line-2 {
+        top: 260px !important;
+    }
+
+    #line-3 {
+        top: 153px !important;
+        left: -108px !important;
+    }
+
+    #line-4 {
+        top: 153px !important;
+        left: -1px !important;
+    }
+
+    #line-5 {
+        top: 153px !important;
+        left: 106px !important;
+    }
+
+    #line-6 {
+        width: 432px !important;
+        top: 153px !important;
+        left: -58px !important;
+    }
+
+    #line-7 {
+        width: 432px !important;
+        top: 153px !important;
+        left: -60px !important;
     }
 }

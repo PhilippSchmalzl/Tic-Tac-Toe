@@ -82,7 +82,7 @@ function checkForWin() {
         for (let i = 0; i < 8; i++) {
             document.getElementById(`line-${i}`).classList.remove('d-none');
         }
-
+        
         setTimeout(function () {
             document.getElementById('game-over').classList.remove('d-none');
             document.getElementById(`restart-btn`).classList.remove('d-none');
